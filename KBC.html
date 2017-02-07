@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	li
+	{
+		display:block;background-color:#4CAF50;color:white;padding:10px;height:40px;width:110px;cursor:pointer;font-family:verdana;font-size: 24px;text-align: center;border-radius: 10px;
+
+	}
+	.footer
+    {
+     width: 785px;
+     color: white;
+     background-color: #4CAF50;
+     padding-left: 550px;
+     padding-top: 100px;
+     height: 150px;
+     font-family: verdana;
+     border-radius: 25px;
+    }
+    body
+    {
+    	background-color: #1d2129;
+    	background-image: url("Cover.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: fixed;
+        background-size: 250px 250px;
+
+    }
+    h3{
+    	color: white;
+    	font-family: verdana;
+    }
+    span{
+    	font-family: verdana;
+    }
+    button{
+    	height:50px;width:100px;background-color:#4CAF50;cursor:pointer;color:white;font-family:verdana;
+    }
+    p{
+    	color: white;
+    }
+</style>
+	<title></title>
+</head>
+<body>
+<h1 align="center" style="color:blue;">Welcome to KBC</h1>
+<p > Note : &nbsp Be careful while selecting your options once you select one it cannot be changed.</p>
+<h3> Q1. Which company logo has 4 circles ?</h3>
+<ul>
+<li id="option1"  onclick="myfunction(0)"></li><br>
+<li id="option2" onclick="myfunction(1)"></li><br>
+<li id="option3" onclick="myfunction(2)"></li><br>
+<li id="option4" onclick="myfunction(3)"></li>
+</ul>
+<h3> Q2. Which company logo has three lines ?</h3>
+<ul>
+<li id="option11" onclick="myfunction1(0)"></li><br>
+<li id="option12" onclick="myfunction1(1)"></li><br>
+<li id="option13" onclick="myfunction1(2)"></li><br>
+<li id="option14" onclick="myfunction1(3)"></li>
+</ul>
+<h3> Q3. Which company logo has cheetah ?</h3>
+<ul>
+<li id="option21" onclick="myfunction2(0)"></li><br>
+<li id="option22" onclick="myfunction2(1)"></li><br>
+<li id="option23" onclick="myfunction2(2)"></li><br>
+<li id="option24" onclick="myfunction2(3)"></li>
+</ul>
+<h3> Q4. Which company logo has alternate blue and white ?</h3>
+<ul>
+<li id="option31" onclick="myfunction3(0)"></li><br>
+<li id="option32" onclick="myfunction3(1)"></li><br>
+<li id="option33" onclick="myfunction3(2)"></li><br>
+<li id="option34" onclick="myfunction3(3)"></li>
+</ul><br>
+<!--<button style="display:block;height:100px;width:100px;background-color:grey;font-size: 24px;" onclick="print(0)">Submit</button>-->
+<button onclick="screen()">Submit</button>&nbsp &nbsp &nbsp
+<button  onclick="myFunction5()">Reset</button><br><br>
+<span style="font-size:20px;color:white;">No. of correct answers :</span>  &nbsp &nbsp<span id="demo" style="color:white;font-size:20px;"></span><br><br>
+<span style="font-size:20px;color:white;">No. of attempted Questions : </span>&nbsp &nbsp<span id="demo1" style="color:white;font-size:20px;"></span>
+<br><br>
+<div class="footer">@ Developed By YAJAT DAWAR</div>
+
+<script type="text/javascript">
+
+
+
+var count=0;
+var count1=0;
+var str=["audi","bmw","jaguar","mercedes"];
+document.getElementById("option1").innerHTML=str[0];
+document.getElementById("option2").innerHTML=str[1];
+document.getElementById("option3").innerHTML=str[2];
+document.getElementById("option4").innerHTML=str[3];
+
+function myFunction5() {
+    location.reload();
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+function screen()
+{
+	document.getElementById("demo").innerHTML=count;
+	document.getElementById("demo1").innerHTML=count1;
+
+}
+
+var i;
+var count2=0;
+function myfunction(i)
+{   if(count2==0)
+	{
+	count1=count1+1;
+	count2=count2+1;
+	var ans="audi";
+	if(i==0){document.getElementById("option1").style.backgroundColor = "lightblue";}
+	else if(i==1){document.getElementById("option2").style.backgroundColor = "lightblue";}
+	else if(i==2){document.getElementById("option3").style.backgroundColor = "lightblue";}
+	else if(i==3){document.getElementById("option4").style.backgroundColor = "lightblue";}
+if(ans==str[i])
+{
+	//alert("correct");
+	count=count+1;
+	//document.getElementById("demo").innerHTML=count;
+
+}
+else
+{
+	//alert("incorrect");
+}
+}
+}
+var str=["audi","bmw","jaguar","mercedes"];
+document.getElementById("option11").innerHTML=str[0];
+document.getElementById("option12").innerHTML=str[1];
+document.getElementById("option13").innerHTML=str[2];
+document.getElementById("option14").innerHTML=str[3];
+
+var i;
+var count3=0;
+function myfunction1(i)
+{   if(count3==0)
+	{
+	var ans="mercedes";
+	count1=count1+1;
+	count3=count3+1;
+	if(i==0){document.getElementById("option11").style.backgroundColor = "lightblue";}
+	else if(i==1){document.getElementById("option12").style.backgroundColor = "lightblue";}
+	else if(i==2){document.getElementById("option13").style.backgroundColor = "lightblue";}
+	else if(i==3){document.getElementById("option14").style.backgroundColor = "lightblue";}
+if(ans==str[i])
+{
+	//alert("correct");
+	count=count+1;
+	//document.getElementById("demo").innerHTML=count;
+}
+else
+{
+	//alert("incorrect");
+}
+}
+}
+var str=["audi","bmw","jaguar","mercedes"];
+document.getElementById("option21").innerHTML=str[0];
+document.getElementById("option22").innerHTML=str[1];
+document.getElementById("option23").innerHTML=str[2];
+document.getElementById("option24").innerHTML=str[3];
+
+var i;
+var count4=0;
+function myfunction2(i)
+{   if(count4==0)
+	{
+	var ans="jaguar";
+	count1=count1+1;
+	count4=count4+1;
+	if(i==0){document.getElementById("option21").style.backgroundColor = "lightblue";}
+	else if(i==1){document.getElementById("option22").style.backgroundColor = "lightblue";}
+	else if(i==2){document.getElementById("option23").style.backgroundColor = "lightblue";}
+	else if(i==3){document.getElementById("option24").style.backgroundColor = "lightblue";}
+if(ans==str[i])
+{
+	//alert("correct");
+	count=count+1;
+	//document.getElementById("demo").innerHTML=count;
+}
+else
+{
+	//alert("incorrect");
+}
+}
+}
+var str=["audi","bmw","jaguar","mercedes"];
+document.getElementById("option31").innerHTML=str[0];
+document.getElementById("option32").innerHTML=str[1];
+document.getElementById("option33").innerHTML=str[2];
+document.getElementById("option34").innerHTML=str[3];
+
+var i;
+var count5=0;
+function myfunction3(i)
+{   if(count5==0)
+	{
+	var ans="bmw";
+	count1=count1+1;
+	count5=count5+1;
+	if(i==0){document.getElementById("option31").style.backgroundColor = "lightblue";}
+	else if(i==1){document.getElementById("option32").style.backgroundColor = "lightblue";}
+	else if(i==2){document.getElementById("option33").style.backgroundColor = "lightblue";}
+	else if(i==3){document.getElementById("option34").style.backgroundColor = "lightblue";}
+if(ans==str[i])
+{
+	//alert("correct");
+	count=count+1;
+	
+}
+else
+{
+	//alert("incorrect");
+}
+}
+}
+
+
+</script>
+
+</body>
+</html>
